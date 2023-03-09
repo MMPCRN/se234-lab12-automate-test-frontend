@@ -4,7 +4,11 @@ services:
     image: dto80/se234-lab12
     ports:
       - 8000:8080
+    volumes:
+      - type: bind
+        source: /home/ubuntu/Data
+        target: /data
   fontend:
-    image: mm18/lab12
+    image: mm18/lab12_mm
     ports:
       - 8001:80
